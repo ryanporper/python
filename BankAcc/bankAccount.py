@@ -31,3 +31,24 @@ account2 = BankAccount(.10, 400)
 
 account1.deposit(100).deposit(150).deposit(200).withdraw(250).yield_interest().display_account_info()
 account2.deposit(200).deposit(100).withdraw(100).withdraw(100).withdraw(100).withdraw(100).yield_interest().display_account_info()   
+
+class User:
+    def __init__(self, name, email):
+        self.name = name
+        self.email = email
+        self.account = BankAccount(int_rate = 0.03, balance = 0)
+
+    def make_deposit(self, amount):
+        self.account.deposit(amount)
+        return self
+
+    def make_withdraw(self, amount):
+        self.account.withdraw(amount)
+        return self
+
+    def display_user_balance(self):
+        self.account.display_account_info()
+        return self
+
+user1 = User("Chris", "chrisrocks@gmail.com")
+user1.make_deposit(100).make_withdraw(50).display_user_balance()
