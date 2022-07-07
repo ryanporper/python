@@ -31,17 +31,20 @@
    * @param {string} str The string to encode.
    * @returns {string} The given string encoded.
    */
-  function encodeStr(str) {
-    currChar = {};
-    for(var i=0; i<str.length; i++) {
-        if(currChar[str[i]]) {
-            currChar[str[i]] += currChar[str[i]];
-        }else{
-            currChar[str[i]] = 1;
-        }
+   function encodeStr(str = "") {
+    let encoded = "";
+  
+    for (let i = 0; i < str.length; i++) {
+      let currChar = str[i];
+      let dupeCount = 1;
+  
+      while (str[i + 1] === currChar) {
+        dupeCount++;
+        i++;
+      }
+      encoded += currChar + dupeCount;
     }
-    // console.log(currChar);
-
+    return encoded.length < str.length ? encoded : str;
   }
   encodeStr(str1);
 
