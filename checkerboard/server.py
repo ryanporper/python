@@ -11,5 +11,9 @@ def render_board():
 def alt_board(num):
     return render_template("altboard.html", num = num)
 
+@app.route('/<int:x>/<int:y>') 
+def custom_board(x, y):
+    return render_template("customboard.html", x = x, y = y)
+
 if __name__=="__main__":   
     app.run(debug=True)  

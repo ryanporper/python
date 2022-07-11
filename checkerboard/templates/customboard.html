@@ -9,15 +9,16 @@
     </head>
     <body>
         <table>
-        {% for i in range(x*y): %}
+            <!-- not showing up on page, I think it is something to do with taking the ints in or the math -->
+        {% for i in range(x) %}
             <tr>
-                {% for j in range(x): %}
+                {% for j in range(y) %}
                 <td class="color1"></td>
                 <td class="color2"></td>
                 {% endfor %}
             </tr>
             <tr>
-                {% for j in range(y): %}
+                {% for j in range(y) %}
                 <td class="color2"></td>
                 <td class="color1"></td>
                 {% endfor %}
