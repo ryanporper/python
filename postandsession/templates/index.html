@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post and Session</title>
+</head>
+<body>
+    <h1>Post and Session</h1>
+    <form action="/info" method="post">
+
+        <input type="hidden" name="secret" id="secret" value="big secret">
+
+        <label for="card">Card info: </label>
+        <input type="text" name="card" id="card">
+
+        <label for="exp">Expiration Date: </label>
+        <input type="text" name="exp" id="exp">
+ 
+        <label for="item">Item Name: </label>
+        <input type="text" name="item" id="item">
+
+        <label for="cost">Item Cost: </label>
+        <input type="text" name="cost" id="cost">
+
+        <button>Submit</button>
+    </form>
+
+    <a href="/tracking">Skip to tracking info</a>
+</body>
+</html>
