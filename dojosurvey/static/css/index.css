@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    outline: 3px solid black;
+    margin: 0px auto;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around; 
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    padding: 10px;
+}
+
+select, .name, textarea{
+    font-size: 1.3rem;
+}
