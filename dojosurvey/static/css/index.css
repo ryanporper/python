@@ -8,7 +8,6 @@
 .container{
     outline: 3px solid black;
     background-color: darksalmon;
-    /* margin: 0px auto; */
     margin: 50px 200px;
     padding: 50px;
     display: flex;
@@ -38,7 +37,6 @@ h1{
     font-size: 2.5rem;
     color: white;
     text-shadow: 3px 3px black;
-
 }
 
 #sub{
@@ -46,5 +44,4 @@ h1{
     box-shadow: 3px 3px black;
     background-color: yellow;
     margin-left: 200px;
-
 }
