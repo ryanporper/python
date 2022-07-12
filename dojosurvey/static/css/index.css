@@ -7,7 +7,9 @@
 
 .container{
     outline: 3px solid black;
-    margin: 0px auto;
+    background-color: darksalmon;
+    /* margin: 0px auto; */
+    margin: 50px 200px;
     padding: 50px;
     display: flex;
     justify-content: space-around; 
@@ -23,4 +25,26 @@ li{
 
 select, .name, textarea{
     font-size: 1.3rem;
+}
+
+label{
+    font-size: 1.3rem;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+h1{
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 3px 3px black;
+
+}
+
+#sub{
+    font-size: 2rem;
+    box-shadow: 3px 3px black;
+    background-color: yellow;
+    margin-left: 200px;
+
 }

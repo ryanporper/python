@@ -10,11 +10,26 @@
 </head>
 <body>
     <div class="container">
-        <h1><u>Submitted info</u></h1>
-        <h3>Name: {{session['name']}}</h3>
-        <h3>Location: {{session['loc']}}</h3>
-        <h3>Favorite Language: {{session['lang']}}</h3>
-        <h3>Comment: {{session['comment']}}</h3>
+        <ul>
+            <li>
+                <h1><u>Submitted info</u></h1>
+            </li>
+            <li>
+                <h3>Name: {{session['name']}}</h3>
+            </li>
+            <li>
+                <h3>Location: {{session['loc']}}</h3>
+            </li>
+            <li>
+                <h3>Favorite Language: {{session['lang']}}</h3>
+            </li>
+            <li>
+                <h3>Comment: {{session['comment']}}</h3>
+            </li>
+            <li>
+                <a href="/">Home</a>
+            </li>            
+        </ul>
     </div>
 </body>
 </html>
