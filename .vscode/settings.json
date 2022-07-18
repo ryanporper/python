@@ -1,3 +1,9 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "python.analysis.extraPaths": [
+        "./dojo_flask/flask_app/config",
+        "./dojo_flask/flask_app",
+        "./users_crud/flask_app/model",
+        "./loginandregistration/flask_app"
+    ]
 }
