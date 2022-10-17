@@ -36,14 +36,6 @@ class User:
             return cls(results[0])
         return False
 
-    # @classmethod
-    # def get_one(cls,id):
-    #     query = "SELECT * FROM users WHERE id = %(id)s;"
-    #     data = {'id':id}
-    #     result = connectToMySQL(db_name).query_db(query,data)
-    #     user = cls(result[0])
-    #     return user
-
     @classmethod
     def get_by_email(cls,data):
         query = "SELECT * FROM users WHERE email = %(email)s;"

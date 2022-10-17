@@ -30,15 +30,6 @@ class Recipe:
             recipes.append(cls(recipe))
         return recipes
 
-    # @classmethod
-    # def get_all(cls):
-    #     query = "SELECT * FROM recipes;"
-    #     result = connectToMySQL(db_name).query_db(query)
-    #     recipes = []
-    #     for recipe in result:
-    #         recipes.append(cls(recipe))
-    #     return recipes
-
     @classmethod
     def get_one(cls,data:dict) -> list:
         query = "SELECT * FROM recipes WHERE id = %(id)s;"
@@ -46,47 +37,6 @@ class Recipe:
         if results:
             return cls(results[0])
         return False
-
-    # @classmethod
-    # def get_one(cls,id):
-    #     query = "SELECT * FROM recipes WHERE id = %(id)s;"
-    #     data = {'id':id}
-    #     result = connectToMySQL(db_name).query_db(query,data)
-    #     recipe = cls(result[0])
-    #     return recipe
-
-    # @classmethod
-    # def save(cls,data):
-    #     query = "INSERT INTO recipes (name, under, description, instructions, created_at, updated_at) VALUES(%(name)s,%(under)s,%(description)s,%(instructions)s)"
-    #     return connectToMySQL(db_name).query_db(query,data)
-
-    # @classmethod
-    # def get_all(cls) -> list:
-    #     query = "SELECT * FROM recipes"
-    #     results = connectToMySQL(db_name).query_db(query)
-    #     recipes = []
-    #     for recipe in results:
-    #         recipes.append(cls(recipe))
-    #     return recipes
-        
-
-    # @classmethod
-    # def get_one(cls,data:dict) -> list:
-    #     query = "SELECT * FROM recipes WHERE id = %(id)s;"
-    #     results = connectToMySQL(db_name).query_db(query,data)
-    #     if results:
-    #         return cls(results[0])
-    #     return False
-
-    # @classmethod
-    # def update_one(cls, data:dict) -> None:
-    #     query = "UPDATE recipes SET name = name = %(name)s, under = %(under)s, description = %(description)s, instructions = %(instructions)s WHERE id = %(id)s"
-    #     return connectToMySQL(db_name).query_db(query,data)
-
-    # @classmethod
-    # def delete_one(cls, data:dict) -> None:
-    #     query = "DELETE FROM recipes WHERE id = %(id)s"
-    #     return connectToMySQL(db_name).query_db(query,data)
 
     @staticmethod
     def validator(data:dict) -> bool:
